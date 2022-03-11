@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>###</title>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="scripts/transitions.js"></script>
+	</head>
+
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
+
+		<!-- Welcome screen -->
+		<div id="main_window">
+			<!-- <img id=leftImg src="assets/img/image2.png" class="image"> -->
+			<div id="cat">
+				<h1>
+					&nbsp;/| ､<br>
+               (°､ ｡ 7<br>
+          &nbsp;|､  ~ヽ<br>
+					&nbsp;じしf_,)〳 <br>
+				</h1>
+         </div>
+			<div id="content">
+				<h1 class="title">Welcome</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+
+		<!-- Web search -->
+				<div id="web_search">
+					<form action="https://duckduckgo.com/" method="GET" autocomplete="off">
+						<label for="q">></label>
+						<input autofocus
+			        	 		id="q"
+			         			name="q"
+			         			type="search"
+			         			placeholder="search with duckduckgo...">
+					</form>
+				</div>
+		<!-- Links -->
+				<nav>
+					<div id=links_container>
+						<ul>
+							<a class="subtitle">School</a>
+								<li><a href="https://web.spaggiari.eu/home/app/default/login.php">Agenda</a></li>
+								<li><a href="https://classroom.google.com/u/1/h">Classroom</a></li>
+								<li><a href="https://www.ispascalcomandini.it/">PC</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Media</a>
+								<li><a href="https://www.youtube.com/">YouTube</a></li>
+								<li><a href="https://www.twitch.tv/">Twitch</a></li>
+								<li><a href="http://192.168.178.69:8096/">Jellyfin</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Socials</a>
+								<li><a href="https://web.whatsapp.com/">WhatsApp</a></li>
+								<li><a href="https://www.reddit.com/">Reddit</a></li>
+								<li><a href="https://twitter.com/home">Twitter</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Dev</a>
+								<li><a href="https://github.com/">Github</a></li>
+								<li><a href="https://archlinux.org/">Arch</a></li>
+								<li><a href="https://www.reddit.com/r/unixporn/">Unixporn</a></li>
+						</ul>
+						<ul>
+							<a class="subtitle">Misc</a>
+								<li><a href="https://rikkaserver.com/">Rksrv</a></li>
+								<li><a href="https://192.168.178.69:8600/">Heimdall</a></li>
+								<li><a href="https://lgbta.miraheze.org/wiki/LGBTA_Wiki">LGBTA Wiki</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="bottom">
+			<div class="contacts">
+				<p>
+					<a href="https://gitlab.com/wolfiy/wlfys-minimal-startpage">GitLab Repo</a> | 
+					<span id="light-mode-toggle" class="light-mode-toggle">Switch themes</span>
+				</p>
+			</div>
+		</div>
+
+		<script src="scripts/darkmode.js"></script>
+	</body>
+</html>
